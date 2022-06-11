@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  display: grid;
+  min-height: 100vh;
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  place-self: center;
+  background-color: white;
+  color: #282c34;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.dialog--open {
+  display: block;
+}
+
+.dialog a {
+  color: inherit;
+}
+
+main[inert] {
+  filter: blur(20px);
+}
+
+form {
+  margin: 2rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: white;
+}
