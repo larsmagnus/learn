@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import { AriaAttributes, DOMAttributes } from "react";
 
 declare module "react" {

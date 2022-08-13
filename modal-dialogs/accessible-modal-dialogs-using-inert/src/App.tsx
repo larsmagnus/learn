@@ -39,27 +39,29 @@ function App() {
 
   return (
     <div className="App">
-      <div
-        role="dialog"
-        id="dialog1"
-        aria-labelledby="dialog1Title"
-        aria-describedby="dialog1Description"
-        aria-modal="true"
-        className={`dialog ${isDialogOpen ? "dialog--open" : ""}`}
-      >
-        <h2 id="dialog1Title">Simple dialog example</h2>
-        <p id="dialog1Description">
-          This is a simple dialog example that uses inert to create a focus-trap
-          within the dialog.
-        </p>
-        <p>
-          The inert attribute will only work if your{" "}
-          <a href="https://caniuse.com/?search=inert">browser supports it</a>
-        </p>
+      <div className={`dialog ${isDialogOpen ? "dialog--open" : ""}`}>
+        <div
+          role="dialog"
+          id="dialog1"
+          aria-labelledby="dialog1Title"
+          aria-describedby="dialog1Description"
+          aria-modal="true"
+          className="dialog__container"
+        >
+          <h2 id="dialog1Title">Simple dialog example</h2>
+          <p id="dialog1Description">
+            This is a simple dialog example that uses inert to create a
+            focus-trap within the dialog.
+          </p>
+          <p>
+            The inert attribute will only work if your{" "}
+            <a href="https://caniuse.com/?search=inert">browser supports it</a>
+          </p>
 
-        <button onClick={toggleDialog} ref={dialogActionRef}>
-          Close
-        </button>
+          <button onClick={toggleDialog} ref={dialogActionRef}>
+            Close
+          </button>
+        </div>
       </div>
 
       <main inert={isDialogOpen ? "" : undefined}>
